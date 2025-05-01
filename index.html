@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ihor Ramskyi | DTP Specialist</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f2f5;
+      color: #333;
+    }
+    header, section, footer {
+      max-width: 960px;
+      margin: auto;
+      padding: 30px;
+      background: white;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    nav {
+      max-width: 960px;
+      margin: 20px auto 0;
+      padding: 0 30px;
+      text-align: right;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+    h1, h2 {
+      color: #004085;
+    }
+    .lang-switch {
+      float: right;
+      margin-top: -10px;
+    }
+    .hidden {
+      display: none;
+    }
+    .profile-img {
+      max-width: 150px;
+      border-radius: 50%;
+      float: left;
+      margin-right: 20px;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    .contact-form button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    .contact-form button:hover {
+      background-color: #0056b3;
+    }
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <span class="lang-switch">
+      <a href="#" onclick="switchLang('uk')">UA</a> |
+      <a href="#" onclick="switchLang('en')">EN</a>
+    </span>
+  </nav>
+
+  <header class="clearfix">
+    <img src="https://via.placeholder.com/150" alt="Ihor Ramskyi" class="profile-img">
+    <h1 id="name">Ihor Ramskyi</h1>
+    <p class="uk">Привіт! Мене звати Ігор Рамський. Я спеціаліст з багатомовної верстки (DTP) з понад 15-річним досвідом у сфері локалізації.</p>
+    <p class="en hidden">Hello! I'm Ihor Ramskyi, a multilingual Desktop Publishing (DTP) Specialist with over 15 years of experience in the localization industry.</p>
+  </header>
+
+  <section>
+    <h2 class="uk">Послуги</h2>
+    <h2 class="en hidden">Services</h2>
+    <ul class="uk">
+      <li>Верстка перекладів (InDesign, Word, PDF)</li>
+      <li>Підготовка матеріалів до перекладу</li>
+      <li>Оптичне розпізнавання тексту (OCR)</li>
+      <li>Консультації з DTP та локалізації</li>
+    </ul>
+    <ul class="en hidden">
+      <li>Translation layout (InDesign, Word, PDF)</li>
+      <li>Pre-translation material preparation</li>
+      <li>Optical Character Recognition (OCR)</li>
+      <li>DTP and localization consulting</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="uk">Контакти</h2>
+    <h2 class="en hidden">Contact</h2>
+    <p>Email: <a href="mailto:ramskyi.ihor@gmail.com">ramskyi.ihor@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/ihor-ramskyi-0441a229" target="_blank">linkedin.com/in/ihor-ramskyi-0441a229</a></p>
+
+    <form class="contact-form" action="mailto:ramskyi.ihor@gmail.com" method="post" enctype="text/plain">
+      <label class="uk">Ім’я:</label>
+      <label class="en hidden">Name:</label>
+      <input type="text" name="name" required>
+
+      <label class="uk">Повідомлення:</label>
+      <label class="en hidden">Message:</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit" class="uk">Надіслати</button>
+      <button type="submit" class="en hidden">Send</button>
+    </form>
+  </section>
+
+  <section>
+    <h2 class="uk">Портфоліо</h2>
+    <h2 class="en hidden">Portfolio</h2>
+    <p class="uk">Приклади робіт будуть додані найближчим часом.</p>
+    <p class="en hidden">Portfolio samples will be added soon.</p>
+  </section>
+
+  <footer>
+    <p class="uk">&copy; 2025 Ігор Рамський</p>
+    <p class="en hidden">&copy; 2025 Ihor Ramskyi</p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.uk, .en').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.' + lang).forEach(el => el.classList.remove('hidden'));
+    }
+  </script>
+</body>
+</html>
